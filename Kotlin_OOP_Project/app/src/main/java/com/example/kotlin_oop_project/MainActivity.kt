@@ -89,6 +89,26 @@ class MainActivity : AppCompatActivity() {
 
         // ayni islemin farkli yazilisi:
         val multiplyLambda2: (Int, Int) -> Int = { x, y -> x * y }
-        println(multiplyLambda2(5,8))
+        println(multiplyLambda2(5, 8))
+
+        // lambda gostermleri genelde internetten bir veri indirirken, internetteki islemlerle calisirken kullanilir.
+        // Cunku asyncron denilen islemler var
+        // asynchrnous :genelde bir islem uzun surerken onu beklemeyip diger islemlerin devam etmesş icin bunu yapariz.
+        // callback function :  islem bittikten sonra ne olacak
+        // listener function :  islemi dinler bitti mi bitmedi mi
+        // completion function : tamamlanma fonksiyonu. tamamlandiginda ne yapacagim
+
+        fun downloadMusicians(url: String, completion: (Musician) -> Unit) {
+            // bu gec inecekse indigini bana haber veren fonksiyonlara ihtiyacim var.
+            // Burada lambda gsoterimleri cok kullanilir.
+            val kirk = Musician("Kirk", "Guitaar", 50)
+            completion(kirk)
+        }
+
+        downloadMusicians("metallica.com", { musician ->
+            // println icine kirk'un ozelliklerini verebilirm. Bu "it" ile yapilir.
+            // Ya da it yazan yere kendi obje ismimi verebilri.
+            println(musician.name)
+        })
     }
 }
