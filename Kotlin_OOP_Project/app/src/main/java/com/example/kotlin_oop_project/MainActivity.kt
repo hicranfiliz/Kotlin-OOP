@@ -39,5 +39,20 @@ class MainActivity : AppCompatActivity() {
         println(lars.returnBandName("h5"))
         lars.sing()
 
+        //polymorphism: Ayni ismi kullanarak farkli islemler yapabilme ozelligi
+        // static polymorphism : Ayni sinifta ayni isimli fonksiyonlarla yapmak istersem..
+        var mathematic = Mathematic()
+        println(mathematic.sum())
+        println(mathematic.sum(3, 5))
+        println(mathematic.sum(2, 3, 5))
+
+        // dynamic polymorphism : Farkli siniflarla yapmak istersem:
+        var animal = Animal()
+        animal.sing()
+
+        var bob = Dog()
+        bob.sing()
+        bob.test()
+
     }
 }
