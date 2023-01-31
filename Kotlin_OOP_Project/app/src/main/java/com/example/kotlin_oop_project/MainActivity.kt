@@ -70,5 +70,25 @@ class MainActivity : AppCompatActivity() {
         println(piano.digital)
         println(piano.roomName)
         piano.info()
+
+        // Lambda expressions
+        // bir fonksiyonu tek bir satirda yazmak icin kullanilan yazim.
+        // fonksiyonu body olara degil hemen inputunu alip outputunu dondurecegi olayini vermemizi saglar.
+
+        fun printString(myString: String) {
+            println(myString)
+        }
+        printString("my Test String")
+
+        // bunu tek satirda birebir lambda gosterimiyle yazalim
+        val testString = { myString: String -> println(myString) }
+        testString("my lambda string")
+
+        val multiplyLambda = { x: Int, y: Int -> println(x * y) }
+        multiplyLambda(3, 5)
+
+        // ayni islemin farkli yazilisi:
+        val multiplyLambda2: (Int, Int) -> Int = { x, y -> x * y }
+        println(multiplyLambda2(5,8))
     }
 }
