@@ -2,6 +2,7 @@ package com.example.kotlin_oop_project
 
 class User {
     // alttakiler property'ler. Yani User classi'indan urettigim nesnelerde isim ve yas ozelligi olabilir demek.
+    // property'leri sinif icinde kapsule etmek gizlemek icin encapsulation kullaniypruz.
     var name: String? = null
     var age: Int? = null
 
