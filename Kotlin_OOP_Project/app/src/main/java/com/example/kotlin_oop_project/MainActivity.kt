@@ -12,13 +12,25 @@ class MainActivity : AppCompatActivity() {
         // String class'indan bir nesne olusturmus oldum..
         //var name : String ="myString"
 
-        var myUser=User("Ravza",10)
+        var myUser = User("Ravza", 10)
         //myUser.name="Hicran"
         //myUser.age=22
-        myUser.name="Pelin"
-        myUser.age=23
+        myUser.name = "Pelin"
+        myUser.age = 23
 
         println(myUser.name)
-         println(myUser.age.toString())
+        println(myUser.age.toString())
+
+        var myMusician = Musician("Hicran", "Keman", 22)
+        println(myMusician.name + "-" + myMusician.instrument + "-" + myMusician.age)
+
+        //encapsulation
+        var nur = MusicianPrivate("Nur", "Gitar", 18)
+        //nur.name="Şazi"
+        println(nur.name + "-" + nur.age)
+
+        println(nur.returnBandName("h5"))
+        println(nur.returnBandName("as"))
+
     }
 }
