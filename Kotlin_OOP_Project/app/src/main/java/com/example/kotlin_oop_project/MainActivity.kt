@@ -32,5 +32,12 @@ class MainActivity : AppCompatActivity() {
         println(nur.returnBandName("h5"))
         println(nur.returnBandName("as"))
 
+        //inheritance : Bir sinifta olusturdugumuz property'leri baska siniflarda kullanabiliriz.
+        var lars = SuperMusician("Katy", "Drams", 23)
+        println(lars.name)
+        println(lars.age)
+        println(lars.returnBandName("h5"))
+        lars.sing()
+
     }
 }
